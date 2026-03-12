@@ -2,6 +2,7 @@
 credentials/credentials.json
 credentials/token.json
 credentials/anthropic_api_key.txt
+credentials/gemini_api_key.txt
 
 # モデル (大きすぎる)
 whisper.cpp/models/*.bin

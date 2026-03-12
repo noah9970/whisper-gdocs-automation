@@ -14,11 +14,9 @@
         <string>/Users/user/whisper-gdocs/transcribe_and_upload.py</string>
     </array>
 
-    <!-- 監視フォルダ: 変化があると自動実行 -->
-    <key>WatchPaths</key>
-    <array>
-        <string>/Users/user/Documents/Recordings</string>
-    </array>
+    <!-- 30秒ごとに自動チェック（Google Drive はWatchPathsが効かないため） -->
+    <key>StartInterval</key>
+    <integer>30</integer>
 
     <!-- 環境変数 -->
     <key>EnvironmentVariables</key>
