@@ -1,0 +1,30 @@
+# 認証情報 (絶対にコミットしない)
+credentials/credentials.json
+credentials/token.json
+credentials/anthropic_api_key.txt
+
+# モデル (大きすぎる)
+whisper.cpp/models/*.bin
+whisper.cpp/models/*.mlmodelc
+whisper.cpp/models/*.mlpackage
+whisper.cpp/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ログ
+logs/*.log
+
+# macOS
+.DS_Store
+
+# 処理状態 (ローカル固有)
+Documents/
+
+# ビルド成果物
+*.o
+*.a
+build/

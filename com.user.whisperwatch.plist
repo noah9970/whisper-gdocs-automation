@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- エージェント識別子 -->
+    <key>Label</key>
+    <string>com.user.whisperwatch</string>
+
+    <!-- 実行コマンド: venv の Python で処理スクリプトを呼ぶ -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/user/whisper-gdocs/venv/bin/python3</string>
+        <string>/Users/user/whisper-gdocs/transcribe_and_upload.py</string>
+    </array>
+
+    <!-- 監視フォルダ: 変化があると自動実行 -->
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/user/Documents/Recordings</string>
+    </array>
+
+    <!-- 環境変数 -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/user</string>
+        <key>LANG</key>
+        <string>ja_JP.UTF-8</string>
+    </dict>
+
+    <!-- ログ出力先 -->
+    <key>StandardOutPath</key>
+    <string>/Users/user/whisper-gdocs/logs/launchd_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/user/whisper-gdocs/logs/launchd_stderr.log</string>
+
+    <!-- ログイン時に自動起動 -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- 連続トリガーを防ぐ最小間隔（秒） -->
+    <key>ThrottleInterval</key>
+    <integer>15</integer>
+
+    <!-- クラッシュ時に自動再起動しない -->
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>
